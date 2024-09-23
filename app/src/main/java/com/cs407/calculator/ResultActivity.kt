@@ -18,7 +18,7 @@ class ResultActivity : AppCompatActivity() {
             insets
         }
         val resultTextView = findViewById<TextView>(R.id.resultTextView)
-        val result = intent.getIntExtra("RESULT", 0)
+        val result = intent.getDoubleExtra("RESULT", 0.0)
         resultTextView.text = "Result: $result"
     }
 }

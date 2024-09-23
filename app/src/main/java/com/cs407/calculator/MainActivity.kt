@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity() {
         val inputField2 = findViewById<EditText>(R.id.inputField2)
 
         findViewById<Button>(R.id.addButton).setOnClickListener {
-            val number1 = inputField1.text.toString().toInt()
-            val number2 = inputField2.text.toString().toInt()
+            val number1 = inputField1.text.toString().toDouble()
+            val number2 = inputField2.text.toString().toDouble()
 
             val result = number1 + number2
             val intent = Intent(this, ResultActivity::class.java)
@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.subtractButton).setOnClickListener {
-            val number1 = inputField1.text.toString().toInt()
-            val number2 = inputField2.text.toString().toInt()
+            val number1 = inputField1.text.toString().toDouble()
+            val number2 = inputField2.text.toString().toDouble()
 
             val result = number1 - number2
             val intent = Intent(this, ResultActivity::class.java)
@@ -44,8 +44,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.multiplyButton).setOnClickListener {
-            val number1 = inputField1.text.toString().toInt()
-            val number2 = inputField2.text.toString().toInt()
+            val number1 = inputField1.text.toString().toDouble()
+            val number2 = inputField2.text.toString().toDouble()
 
             val result = number1 * number2
             val intent = Intent(this, ResultActivity::class.java)
@@ -54,10 +54,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.divideButton).setOnClickListener {
-            val number1 = inputField1.text.toString().toInt()
-            val number2 = inputField2.text.toString().toInt()
+            val number1 = inputField1.text.toString().toDouble()
+            val number2 = inputField2.text.toString().toDouble()
 
-            if (number2 == 0) {
+            if (number2 == 0.0) {
                 Toast.makeText(this, "Cannot divide by zero", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
